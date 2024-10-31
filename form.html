@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="form-container">
+        <section class="overlay">
+            <div class="popup-overlay"></div>
+            <div class="container" id="container">
+                <div class="form-header">
+                    <h2>Quase lá...</h2>
+                    <p>Por gentileza, Informe seus dados para solicitar seu orçamento!</p>
+                </div>
+                <form method="post" action="https://script.google.com/macros/s/AKfycbwptnUSrac3a5Yj1WIzUih6WHG6AvcCfjQsieZaqgK69Y1ieL3eLE1l6WHDwRIeKKwK/exec" id="contact-form" name="contact-form">
+                    <div class="input-container">
+                        <input type="text" name="lead-name" id="name" pattern="[A-Za-zÀ-ÿ\s]+" autocomplete="off" required="required">
+                        <label class="label-name" for="name">Nome</label>
+                    </div>
+                    <output id="name-error" role="alert" class=""></output>
+                    <div class="input-container">
+                        <input type="email" name="lead-email" id="email" pattern="[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}" autocomplete="off" required="required">
+                        <label class="label-email" for="email">Email</label>
+                    </div>
+                    <output id="email-error" role="alert" class=""></output>
+                    <div class="input-container-phone">
+                        <input type="tel" aria-invalid="false" aria-label="Telefone" placeholder="(99) 9999-9999" aria-labelledby="label-Telefone" id="phone" name="lead-phone" pattern="\(\d{2}\) \d{5}-\d{4}" autocomplete="off" required="required">
+                        <label class="phone-number" for="phone">Telefone</label>
+                    </div>
+                    <output id="phone-error" role="alert"  class=""></output>
+                    <button aria-disabled="false" value="btnSubmit" id="btnSubmit" type="submit">Solicitar Orçamento</button>
+                    <div id="close-popup"><span role="button" tabindex="0" aria-label="Close modal"><svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.41401 6.00012L11.707 1.70721C12.098 1.31622 12.098 0.684236 11.707 0.293244C11.316 -0.097748 10.684 -0.097748 10.293 0.293244L6.00001 4.58615L1.70701 0.293244C1.31601 -0.097748 0.684006 -0.097748 0.293006 0.293244C-0.0979941 0.684236 -0.0979941 1.31622 0.293006 1.70721L4.58601 6.00012L0.293006 10.293C-0.0979941 10.684 -0.0979941 11.316 0.293006 11.707C0.488006 11.902 0.744006 12 1.00001 12C1.25601 12 1.51201 11.902 1.70701 11.707L6.00001 7.4141L10.293 11.707C10.488 11.902 10.744 12 11 12C11.256 12 11.512 11.902 11.707 11.707C12.098 11.316 12.098 10.684 11.707 10.293L7.41401 6.00012Z"></path></svg></span></div>
+                </form>
+                <div class="form-disclaimer">
+                    <p>Ao se inscrever, você concorda em receber e-mails de marketing. Consulte nossa <a target="_blank" href="https://aledilumina.com.br/pages/politica-de-privacidade" title="política de privacidade e termos de serviço">política de privacidade e termos de serviço</a> para obter mais informações.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        
+    </script>
+    <script src="form.js"></script>  
+</body>
+</html>
