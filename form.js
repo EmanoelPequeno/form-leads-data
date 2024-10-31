@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwptnUSrac3a5Yj1WIzUih6WHG6AvcCfjQsieZaqgK69Y1ieL3eLE1l6WHDwRIeKKwK/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPVF_8a769mO2H-Qdyee_L0fYiezlxcq-8-k9c_bKgv5rM08oxW1V4N_GU00HkB0di/exec';
     const form = document.forms["contact-form"];
     const phoneInput = document.getElementById("phone");
 
