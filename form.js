@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyPVF_8a769mO2H-Qdyee_L0fYiezlxcq-8-k9c_bKgv5rM08oxW1V4N_GU00HkB0di/exec';
     const form = document.forms["contact-form"];
     const phoneInput = document.getElementById("phone");
+    const submitButton = document.getElementById("btnSubmit");
 
     // Máscara para o campo de telefone
     phoneInput.addEventListener("input", function () {
@@ -63,19 +64,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Se o formulário for válido, envia ao Google Sheets e exibe o alerta
         if (isFormValid) {
+            setLoadingState(true);
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    if (!response.ok) throw new Error("Erro ao enviar dados.");
+                    return response.json();
+                })
                 .then(() => {
                     alert("Seu formulário foi enviado com sucesso!");
                     form.reset(); // Limpa o formulário após o envio
+                    setLoadingState(false);
                     window.location.reload(); // Recarrega a página
                 })
                 .catch(error => alert('Error!', error.message));
+                alert("Erro ao enviar o formulário: " + error.message);
+                setLoadingState(false);
         }
     });
+    function setLoadingState(isLoading) {
+        submitButton.classList.toggle('loading', isLoading); // Apenas exibe ou oculta o spinner
+    }
 });
-
-
-
 
 
 // document.addEventListener('DOMContentLoaded', function () {

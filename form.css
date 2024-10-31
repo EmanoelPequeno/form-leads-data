@@ -139,3 +139,28 @@ input:focus + .label-email,input:focus + .label-name, input.filled + .label-emai
 #btnSubmit:hover {
 	background-color: rgb(141, 234, 1);
 }
+#btnSubmit.loading {
+    position: relative;
+    color: transparent; /* Esconde o texto do botão */
+    pointer-events: none; /* Apenas visual; não desabilita a funcionalidade */
+}
+
+/* Spinner de carregamento */
+#btnSubmit.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
