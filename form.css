@@ -69,6 +69,10 @@ input:focus + .label-email,input:focus + .label-name, input.filled + .label-emai
     transform: translateY(-7px);
     font-size: 12px;
 }
+input.disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
 .input-container-phone {
     position: relative;
 }

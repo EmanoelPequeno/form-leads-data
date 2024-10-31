@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     function setLoadingState(isLoading) {
+        document.querySelectorAll('input').forEach(input => {
+            input.classList.add('disabled');
+        });
         submitButton.classList.toggle('loading', isLoading); // Apenas exibe ou oculta o spinner
     }
 });
